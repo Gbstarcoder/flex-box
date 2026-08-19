@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 36px;
+
+    width: 100%;
+    max-width: 900px;
+}
+
+
+/* Individual Card */
+.card {
+    width: 280px;
+    min-height: 400px;
+
+    border: 2px solid #222;
+    border-radius: 3px;
+
+    padding: 35px 18px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: white;
+}
+
+
+/* Icons */
+.icon {
+    font-size: 52px;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+}
+
+.twitter {
+    font-size: 50px;
+}
+
+.youtube {
+    font-size: 52px;
+}
+
+
+/* Heading */
+.card h2 {
+    font-size: 28px;
+    margin: 20px 0 14px;
+
+    font-weight: 800;
+    color: #111;
+}
+
+
+/* Paragraph */
+.card p {
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #222;
+
+    margin-bottom: 22px;
+}
+
+
+/* Button */
+.btn {
+    width: 240px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: auto;
+
+    background-color: black;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+}
+
+
+/* Instagram Card */
+.instagram-card {
+    background-color: #e72d70;
+    border-color: #e72d70;
+    color: white;
+}
+
+
+/* Instagram icon */
+.instagram-card .icon {
+    color: white;
+}
+
+
+/* Instagram heading */
+.instagram-card h2 {
+    color: white;
+}
+
+
+/* Instagram paragraph */
+.instagram-card p {
+    color: white;
+}
+
+
+/* Instagram button */
+.instagram-card .btn {
+    background-color: white;
+    color: #e72d70;
+}
+
+
+/* Hover Effects */
+.btn {
+    transition: 0.3s ease;
+}
+
+.card:not(.instagram-card) .btn:hover {
+    background-color: #e72d70;
+}
+
+.instagram-card .btn:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* ----------------------------- */
+/* RESPONSIVE DESIGN */
+/* ----------------------------- */
+
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    .cards-container {
+        gap: 20px;
+    }
+
+    .card {
+        width: 30%;
+        min-height: 390px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    body {
+        padding: 30px 20px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+        min-height: 400px;
+    }
+
+    .btn {
+        max-width: 280px;
+    }
+}
+
+
+/* Small Phones */
+@media (max-width: 400px) {
+
+    .card {
+        min-height: 380px;
+        padding: 30px 15px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+    }
+
+    .card p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
